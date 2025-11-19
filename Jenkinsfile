@@ -1,0 +1,35 @@
+pipeline{
+agent roboshop
+    stages{
+        stage('build'){
+            steps{
+                sh """
+                """
+                echo 'build is running'
+            }
+
+        }
+        stage('test'){
+            steps{
+                echo 'test has started'
+            }
+        }
+        stage('deploy'){
+            steps{
+                echo 'deploy will be begin'
+            }
+        }
+    }
+post{
+    always{
+        echo 'hello team'
+        deleteDir()
+    }
+    success{
+        echo 'hello team'
+    }
+    failure{
+        echo 'hello team'
+    }
+}
+}
