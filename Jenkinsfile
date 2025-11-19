@@ -1,5 +1,5 @@
 pipeline{
-    agent roboshop
+    agent any
         stages{
             stage('build'){
                 steps{
