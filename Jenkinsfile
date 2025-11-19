@@ -3,11 +3,8 @@ agent roboshop
     stages{
         stage('build'){
             steps{
-                sh """
-                """
                 echo 'build is running'
             }
-
         }
         stage('test'){
             steps{
