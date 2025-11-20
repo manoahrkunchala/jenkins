@@ -1,22 +1,24 @@
 pipeline{
-    agent any
-        stages{
-            stage('build'){
-                steps{
-                    echo 'build is running'
-                }
-            }
-            stage('test'){
-                steps{
-                    echo 'test has started'
-                }
-            }
-            stage('deploy'){
-                steps{
-                    echo 'deploy will be begin'
-                }
+    agent {
+        label 'AGENT-1'
+    }
+    stages{
+        stage('build'){
+            steps{
+                echo 'build is running'
             }
         }
+        stage('test'){
+            steps{
+                echo 'test has started'
+            }
+        }
+        stage('deploy'){
+            steps{
+                echo 'deploy will be begin'
+            }
+        }
+    }
     post{
         always{
             echo 'hello team'
