@@ -14,7 +14,6 @@ pipeline{
                 script{
                     sh """
                         echo 'build is running'
-                        sleep 10
                         env
                     """
                 }
